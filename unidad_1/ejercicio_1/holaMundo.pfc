@@ -1,0 +1,17 @@
+program print;
+
+process type printId (i : integer);
+begin
+  writeln('Soy el proceso ', i);
+end;
+
+var
+  p1 , p2 ,p3 : printId;
+
+begin
+  cobegin
+     p1(1);
+     p2(2);
+     p3(3);
+	coend;
+end.

@@ -24,3 +24,10 @@ Si siguó las recomendaciones e instalo en linux y con el repositorio. revisar e
 
 ### 3.1 plugins recomendados
 - Docker
+
+## 4. Correr los container de la raiz
+en una terminal desde la raiz de este repo ejecutar:
+
+```bash
+$ docker-compose up
+```

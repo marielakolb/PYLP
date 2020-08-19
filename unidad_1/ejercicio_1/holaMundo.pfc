@@ -1,4 +1,4 @@
-program print;
+program ejercicio_1;
 
 process type printId (i : integer);
 begin

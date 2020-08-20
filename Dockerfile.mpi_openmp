@@ -1,0 +1,33 @@
+FROM ubuntu:latest
+
+RUN groupadd -r curso --gid=999 && useradd -r -g curso -p curso --uid=999 curso
+
+ARG web_document_root=/home/curso
+ENV WEB_DOCUMENT_ROOT=$web_document_root
+
+WORKDIR $web_document_root
+
+RUN apt-get --yes -qq update \
+ && apt-get --yes -qq upgrade \
+    bzip2 \
+    cmake \
+    cpio \
+    curl \
+    g++ \
+    gcc \
+    gfortran \
+    git \
+    gosu \
+    libblas-dev \
+    liblapack-dev \
+    libopenmpi-dev \
+    openmpi-bin \
+    python3-dev \
+    python3-pip \
+    virtualenv \
+    wget \
+    zlib1g-dev \
+    vim       \
+    htop      
+
+ENTRYPOINT ["tail", "-f", "/dev/null"]

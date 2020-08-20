@@ -1,12 +1,20 @@
-FROM ubuntu:16.04
+FROM ubuntu:latest
 
-ARG web_document_root=/home
+RUN groupadd -r curso --gid=999 && useradd -r -g curso -p curso --uid=999 curso
+
+ARG web_document_root=/home/curso
+
 ENV WEB_DOCUMENT_ROOT=$web_document_root
 
 WORKDIR $web_document_root
 
+RUN apt-get --yes -qq update \
+ && apt-get --yes -qq upgrade 
+
 COPY /bin/pfc2-0.9.40.x86_64.tar.gz /usr/local/bin 
 
 RUN tar -xvf /usr/local/bin/pfc2-0.9.40.x86_64.tar.gz -C /usr/local/bin/
+
+RUN su - curso 
 
 ENTRYPOINT ["tail", "-f", "/dev/null"]

@@ -29,5 +29,9 @@ Si siguó las recomendaciones e instalo en linux y con el repositorio. revisar e
 en una terminal desde la raiz de este repo ejecutar:
 
 ```bash
+# para levantar los containers
 $ docker-compose up
+
+# para parar los containers
+docker-compose stop
 ```

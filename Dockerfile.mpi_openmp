@@ -1,14 +1,17 @@
 FROM ubuntu:latest
 
-RUN groupadd -r curso --gid=999 && useradd -r -g curso -p curso --uid=999 curso
+ARG home_dir=/home
+ENV WEB_DOCUMENT_ROOT=$home_dir
 
-ARG web_document_root=/home/curso
-ENV WEB_DOCUMENT_ROOT=$web_document_root
+WORKDIR $home_dir
 
-WORKDIR $web_document_root
+ENV TERM=xterm\
+    TZ=America/Argentina/Cordoba\
+    DEBIAN_FRONTEND=noninteractive
 
-RUN apt-get --yes -qq update \
- && apt-get --yes -qq upgrade \
+RUN apt-get update -y
+
+RUN apt-get install -y \
     bzip2 \
     cmake \
     cpio \
@@ -26,8 +29,11 @@ RUN apt-get --yes -qq update \
     python3-pip \
     virtualenv \
     wget \
-    zlib1g-dev \
     vim       \
     htop      
+
+# RUN groupadd -r curso && useradd --no-log-init -r -d ${home_dir} -g curso curso
+# RUN chmod 777 -R ${home_dir}
+# USER curso 
 
 ENTRYPOINT ["tail", "-f", "/dev/null"]

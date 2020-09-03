@@ -6,10 +6,16 @@ services:
       context: .
       dockerfile: Dockerfile.pascalfc
     volumes:
-      - ./unidad_1:/home/curso
+      - ./unidad_1:/home
   mpi_openmp:
     build: 
       context: .
       dockerfile: Dockerfile.mpi_openmp
     volumes:
-      - ./unidad_3:/home/curso
+      - ./unidad_3:/home
+  haskell_prolog:
+    build: 
+      context: .
+      dockerfile: Dockerfile.haskell_prolog
+    volumes: 
+      - ./unidad_4:/home

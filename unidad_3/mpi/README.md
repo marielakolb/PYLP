@@ -50,4 +50,6 @@ para compilar el archivo fuente `.cpp` debe ejecutar con la opcion `-o` le damos
 
 Para ejecutar los programas es necesario correr:
 
-    mpirun -np <nro_tareas> <archivo_executable>
+```sh
+mpirun -np <nro_tareas> <archivo_executable>
+```

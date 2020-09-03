@@ -18,5 +18,6 @@ int main(int argc, char *argv[])
     // de codigo despues de "Finalize", es conveniente asegurarnos con una
     // condicion si vamos a ejecutar mas codigo (Por ejemplo, con "if(rank==0)".
     MPI_Finalize();
+    
     return 0;
 }

@@ -15,10 +15,14 @@ este proceso genera un archivo con extensión
 - `myFile.lst` que contendrá los errores de compilacion si los hubiera.
 - `myFile.obj` que es el ejecutable.
 
-## ejecutando los programas
+## Ejecutando los programas
 
 Para ejecutar los programas debe correr el siguiente comando:
 
 ```sh
 pfc2int <myFile.obj>
 ```
+
+## Escribiendo codigo
+
+[Referencias rapidas](./RESUMEN.MD)

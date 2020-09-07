@@ -19,3 +19,6 @@ services:
       dockerfile: Dockerfile.haskell_prolog
     volumes: 
       - ./unidad_4:/home
+      - /home/javascript/node_modules
+    ports: 
+      - 3000:3000

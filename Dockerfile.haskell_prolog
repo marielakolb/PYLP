@@ -23,8 +23,11 @@ RUN curl --silent --location https://deb.nodesource.com/setup_12.x | bash - \
     && apt-get install --yes nodejs \
     && apt-get install --yes build-essential
 
+COPY ["unidad_4/javascript/package.json", "unidad_4/javascript/package-lock.json", "/home/javascript/"]
+
+RUN cd javascript/ && npm install
 
 # RUN groupadd -r curso && useradd --no-log-init -r -g curso curso
 # USER curso 
 
-ENTRYPOINT ["tail", "-f", "/dev/null"]
+CMD ["npx", "nodemon", "javascript/index.js"]

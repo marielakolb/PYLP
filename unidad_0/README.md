@@ -16,6 +16,7 @@ se recomienda utilizar una distribución de linux e [instalar usando el reposito
 Si siguó las recomendaciones e instalo en linux y con el repositorio. revisar estos pasos de [post-instalacion.](https://docs.docker.com/engine/install/linux-postinstall/)
 
 ## 2. Instalar docker-compose ([¿Qué es y porqué usar docker-compose?](https://docs.docker.com/compose/))
+
 [Instalar compose](https://docs.docker.com/compose/install/)
 
 ## 3. Instalar VS code
@@ -23,9 +24,11 @@ Si siguó las recomendaciones e instalo en linux y con el repositorio. revisar e
 [Instalar VS Code](https://code.visualstudio.com/)
 
 ### 3.1 plugins recomendados
+
 - Docker
 
 ## 4. Correr los container de la raiz
+
 en una terminal desde la raiz de este repo ejecutar:
 
 ```bash

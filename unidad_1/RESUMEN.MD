@@ -45,9 +45,33 @@ end;
 
 # Semaforos
 
-## Declaracion e Inicializacion
+Los semaforos se deben definir en la  seccion `var`.
 
-## Utilizacion
+NOTES
+
+1. Los semaforos o los objetos que los contengan solo pueden declararse en una seccion `var` global.
+2. Los semaforos pueden pasarse como parametros a subprogramas, pero deben pasarse por referencia con el indetificador `var` correspondiente.
+3. Semaphores are guaranteed to have no processes blocked on them initially, but the value is undefined until the semaphore has been passed to the initial procedure.
+
+## Declaracion y operaciones
+
+```pascal
+// Declaracion de un semaforo 
+// var <semaphore_name> = semaphore;
+var semaforoVar = semaphore;
+
+// Inicializacion
+//  initial(<semaphore_name>,<valor>)
+initial(semaforoVar, 0);
+
+// Wait
+//wait(<semaphore_name>)
+wait(semaforoVar);
+
+// Signal
+//signal(<semaphore_name>)
+signal(semaforoVar);
+```
 
 # Otras Referencias rapidas
 
@@ -55,5 +79,4 @@ end;
 // declaracion de un array
 // array index_type{index_type} of type
 var p: array[1..max] of proc;
-
 ```

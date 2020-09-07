@@ -15,5 +15,11 @@
   "bugs": {
     "url": "https://github.com/SuichiM/PYLP/issues"
   },
-  "homepage": "https://github.com/SuichiM/PYLP#readme"
+  "homepage": "https://github.com/SuichiM/PYLP#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "1.18.6"
+  }
 }

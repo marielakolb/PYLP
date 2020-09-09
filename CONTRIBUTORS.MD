@@ -1,4 +1,4 @@
 # CONTRIBUTORS PYLP
 
 ## 2020
-- Esteban Martini
+- Esteban Martini (@SuichiM)

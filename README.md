@@ -16,11 +16,11 @@ Martini Esteban
 
 ## Lineamientos para la entrega de los ejercicios
 
-[Lineamientos](../docs/lineamientos_entrega.md)
+[Lineamientos](./docs/lineamientos_entrega.md)
 
-## Lineamientos sobre la producción del video tutorial
+## Lineamientos sobre la producción de los video tutoriales
 
-[Lineamientos](../docs/lineamientos_video.md)
+[Lineamientos](./docs/lineamientos_video.md)
 
 ## Acerca del Repositorio
 

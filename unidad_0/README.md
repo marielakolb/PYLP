@@ -60,9 +60,9 @@ acá un **tutorial de como instalar docker** en linux: 👉 [tutorial](https://w
 
 [Instalar VS Code](https://code.visualstudio.com/)
 
-### 3.1 plugins recomendados
+### 3.1 Instalar los siguientes plugins de VS Code
 
-- Docker
+- Docker (**Microsoft**) v1.5.0+
 
 ## 4. Correr los container de la raiz
 

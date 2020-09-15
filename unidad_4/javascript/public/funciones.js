@@ -6,7 +6,7 @@ const doble = function (n) {
 };
 
 
-module.exports = {
+exports = {
   sucesor,
   doble
 }

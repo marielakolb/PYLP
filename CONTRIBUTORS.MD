@@ -1,4 +1,6 @@
 # CONTRIBUTORS PYLP
 
 ## 2020
-    Santiago Villar (InahoAZ)
+- Esteban Martini (@SuichiM)
+- Nacimiento, Francisco Martin (@martinnacimiento)
+- Santiago Villar (@InahoAZ)

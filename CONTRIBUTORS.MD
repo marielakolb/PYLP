@@ -1,4 +1,6 @@
 # CONTRIBUTORS PYLP
 
 ## 2020
-  Nacimiento, Francisco Martin (martinnacimiento)
+- Esteban Martini (@SuichiM)
+- Nacimiento, Francisco Martin (@martinnacimiento)
+

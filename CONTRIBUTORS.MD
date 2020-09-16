@@ -1,4 +1,6 @@
 # CONTRIBUTORS PYLP
 
 ## 2020
-  German Pautsh (gpautsch)
+- Esteban Martini (@SuichiM)
+- German Pautsch (@gpautsch)
+

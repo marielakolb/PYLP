@@ -1,4 +1,8 @@
 # CONTRIBUTORS PYLP
 
 ## 2020
-    Zarske Arnold Oscar (AuxZarske)
+- Esteban Martini (@SuichiM)
+- German Pautsch (@gpautsch)
+- Nacimiento, Francisco Martin (@martinnacimiento)
+- Santiago Villar (@InahoAZ)
+- Zarske Arnold Oscar (@AuxZarske)

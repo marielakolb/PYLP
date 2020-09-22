@@ -1,4 +1,5 @@
 # CONTRIBUTORS PYLP
+
 ## 2020
 - Esteban Martini (@SuichiM)
 - German Pautsch (@gpautsch)
@@ -7,3 +8,5 @@
 - Zarske Arnold Oscar (@AuxZarske)
 - Uriarte, Rodrigo Leonel (@rodrigoUriarte)
 - Javier Kachuka (@javikachuka)
+- Nicolas Sawczuk (@NicoSawczuk) 
+

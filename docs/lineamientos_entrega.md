@@ -94,5 +94,53 @@ con ello el comando para la creacion de rama quedaría:
 git checkout -b tp<tema>_ej<nro>
 ```
 
+## Nombres de archivo
 
+Al resolver un ejercicio, se debera crear un archivo con el mismo nombre del archivo base o en su defecto con el nombre `ejercicio<n>`, seguido siempre de un guion bajo (`_`) y su apellido, en la ruta correspondiente
+
+ejemplo:
+
+`unidad_1/ejercicio_1/holamundo_<apellido>.pfc`
+`unidad_1/ejercicio_1/ejercicio1_<apellido>.pfc`
+.
+
+## Mensaje de commit
+
+En el mensaje de cada commit se debe expresar con claridad lo realizado, se puede seguir el siguiente ejemplo como formato:
+
+`se soluciona el ejercicio 1 del tp1`.
+
+## Pull request de los ejercicios
+
+Para hacer pull request al repositorio oficial, es decir realizar la entrega de los ejercicios,  deben:
+
+- [x] Haber realizado el ejericio o solucion.
+- [x] Haber realizado el commit de la solucion con su mensaje correspondiente.
+- [x] Haber hecho push a su repositorio forkeado de la catedra. `git push origin tp1_ej1`.
+- [x] 
+
+Una vez completado la lista de acciones, deben:
+
+1. Ir al repositorio oficial, a la pestaña de `Pull requests` y click en el boton `New pull request`.
+
+2. Seleccionar como destino del Pull Request el repositorio `PYLP-UNaM/PYLP` y la rama `2020` y como origen su repositorio y la brach que posee la solucion del ejercicio. 
+
+el pull request debera seguir la siguiente convencion:
+
+**Titulo**
+
+```sh
+solucion Ejercicio <N> - <Apellido> <1erNombre>#(En caso que el apellido se repita)
+```
+
+**Descripcion** *\*opcional*
+```
+<Consideraciones relevantes>
+```
+
+## Revision de los ejercicios y cierre de los issues
+
+Es posible que surgan sugerencias o comentarios en los PR a fin de mejorar el proceso de entrega de los ejercicios, por los que deben estar atentos a las devoluciones.
+
+> ⚠️ En ningún caso el alumno debe marcar de manera manual alguna tarea como resuelta o cerrar los issues de manera manual. El cierre de los issues de los ejercicios se realizaran de manera automatica con las integraciones de los PR a la branch correspodiente.  
 

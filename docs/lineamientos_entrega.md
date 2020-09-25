@@ -114,10 +114,9 @@ En el mensaje de cada commit se debe expresar con claridad lo realizado, se pued
 
 Para hacer pull request al repositorio oficial, es decir realizar la entrega de los ejercicios,  deben:
 
-- [x] Haber realizado el ejericio o solucion.
+- [x] Haber realizado el ejercicio o solucion.
 - [x] Haber realizado el commit de la solucion con su mensaje correspondiente.
 - [x] Haber hecho push a su repositorio forkeado de la catedra. `git push origin tp1_ej1`.
-- [x] 
 
 Una vez completado la lista de acciones, deben:
 

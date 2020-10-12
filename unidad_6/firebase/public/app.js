@@ -1,6 +1,4 @@
 /* Initialize */
-// import services from './services'
-
 import api from './services.js'
 
 const clearForm = () => {
@@ -9,9 +7,8 @@ const clearForm = () => {
   document.getElementById("fecha").value = "";
 };
 
-
 //Agrega un elemento a la collection User
-async function guardar() {
+const guardar = async function () {
   const userData = {
     first: document.getElementById("nombre").value,
     last: document.getElementById("apellido").value,
@@ -19,17 +16,17 @@ async function guardar() {
   };
 
   try {
-    const docRef = await api.crearRegistro(userData);
+    const docRef = await api.create(userData);
 
     console.log("Document written with ID: ", docRef.id);
     clearForm();
   } catch (error) {
     console.error("Error adding document: ", error);
   }
-}
+};
 
 //Actualizar registro
-function editar(id, nombre, apellido, fecha) {
+const editar = function (id, nombre, apellido, fecha) {
   document.getElementById("nombre").value = nombre;
   document.getElementById("apellido").value = apellido;
   document.getElementById("fecha").value = fecha;
@@ -45,7 +42,7 @@ function editar(id, nombre, apellido, fecha) {
     };
 
     try {
-      const updatedRec = await api.updateRegistro(id, userData);
+      const updatedRec = await api.update(id, userData);
 
       console.log("Document successfully updated!", updatedRec);
       clearForm();
@@ -57,13 +54,12 @@ function editar(id, nombre, apellido, fecha) {
   };
 }
 
-async function eliminar(id) {
+const eliminar = async function(id) {
   try {
-    await  api.eliminarRegistro(id)   
+    await api.delet(id);
     console.log("Document successfully deleted!");
-
   } catch (error) {
-    console.error("Error removing document: ", error);    
+    console.error("Error removing document: ", error);
   }
 }
 
@@ -74,18 +70,35 @@ const loadData = (data) => {
 
   data.forEach((doc) => {
     console.log(doc.data());
-    const {first, last, born, } = doc.data();
+    const { first, last, born } = doc.data();
     tabla.innerHTML += `
-          <tr>
-            <th scope="row">${doc.id}</th>
-            <td>${first}</td>
-            <td>${last}</td>
-            <td>${born}</td>
-            <td><button class="btn btn-danger" onclick="eliminar('${doc.id}')">Eliminar</button></td>
-            <td><button class="btn btn-warning" onclick="editar('${doc.id}','${first}','${last}','${born}')">Editar</button></td>
-          </tr>
-        `;
+            <tr>
+              <th scope="row">${doc.id}</th>
+              <td>${first}</td>
+              <td>${last}</td>
+              <td>${born}</td>
+              <td><button class="btn btn-danger" onclick="showModalEliminar('${doc.id}')" data-toggle="modal" data-target="#modalConfirmEliminar">Eliminar</button></td>
+              <td><button class="btn btn-warning" onclick="editar('${doc.id}','${first}','${last}','${born}')">Editar</button></td>
+            </tr>
+          `;
   });
 };
 
-api.suscribe(loadData)
+const showModalEliminar = (id)=>{
+  const msg = document.getElementById("mensajeEliminar");
+  const btnEliminar = document.getElementById('btnEliminar');
+  msg.innerHTML = `¿Seguro desea eliminar el registro con ID: <b>${id} </b>?`
+
+  btnEliminar.onclick = ()=>{
+    eliminar(id)
+    const modalEliminar = $('#modalConfirmEliminar').modal('hide');
+  }
+
+}
+
+api.suscribe(loadData);
+
+window.guardar = guardar
+window.editar = editar
+window.eliminar = eliminar
+window.showModalEliminar = showModalEliminar

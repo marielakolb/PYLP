@@ -1,12 +1,4 @@
-const firebaseConfig = {
-  apiKey: "",
-  authDomain: "",
-  databaseURL: "",
-  projectId: "",
-  storageBucket: "",
-  messagingSenderId: "",
-  appId: "",
-};
+import {firebaseConfig} from './env.js'
 
 // Your web app's Firebase configuration
 firebase.initializeApp(firebaseConfig);
@@ -14,30 +6,28 @@ firebase.initializeApp(firebaseConfig);
 // Initialize Firebase
 const db = firebase.firestore();
 
-const crearRegistro = (data) => {
+const create = (data) => {
   return db.collection("users").add(data);
 };
 
-const updateRegistro = (id, data) => {
+const update = (id, data) => {
   const recordRef = db.collection("users").doc(id);
   return recordRef.update(data);
 };
 
-const eliminarRegistro = (id) =>{
-  db.collection("users")
+const delet = (id) => {
+  return db.collection("users")
   .doc(id)
   .delete()
 }
-
-
 
 const suscribe = (cb) => {
   return db.collection("users").onSnapshot(cb);
 };
 
 export default {
-  crearRegistro,
-  updateRegistro,
-  eliminarRegistro,
+  create,
+  update,
+  delet,
   suscribe
 }

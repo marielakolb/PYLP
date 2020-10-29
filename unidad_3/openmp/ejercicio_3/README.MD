@@ -2,7 +2,15 @@
 
 ## Enunciado
 
-Dado un vector de tamaño `NH`, realizar un algoritmo que lance `NH` hilos. Cada hilo debe comprobar si el elemento en la posición “`hilo`” es múltiplo de la suma de sus dos vecinos (izquierdo y derecho) _(Ojo! Con los extremos inferior y superior)_.
+Dado un vector de tamaño `NH`, realizar un algoritmo que lance `NH` hilos. Cada hilo debe comprobar si la suma de  los elementos (izquierdo y derecho) del vector en la posicion `hilo` es multiplo del elemento en la posicion `hilo`_(Ojo! Con los extremos inferior y superior)_. 
+
+![multiplo](../../../img/ej3_omp_1.png) 
+
+![multiplo](../../../img/ej3_omp_2.png)
+
+se debe imprimir por pantalla el resultado.
+
+una vez resuelto el ejercicio.
 
 ## Tareas
 

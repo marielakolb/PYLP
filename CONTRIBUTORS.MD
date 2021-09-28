@@ -12,3 +12,5 @@
 - John Babi (@charlesbabi)
 - Facundo Silveira Do Santo (@facundSilveira)
 - Andrea Zakowicz (@Tremoteam)
+
+- Enrique Gauto Sand (@EnriqueGautoSand)

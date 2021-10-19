@@ -1,0 +1,17 @@
+program ejericio_1;
+Begin
+process type printId(rango:integer);
+begin
+  writeln('soy el proceso', rango);
+end;
+
+var
+  p1, p2: printId;
+begin 
+  cobegin
+    p1(1);
+    p2(2);
+  coend;
+end;
+
+end.

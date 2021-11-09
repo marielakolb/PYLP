@@ -1,0 +1,44 @@
+program ejercicio_5_3_GautoSand;
+
+process type obtenerPrimo(inicio:integer; fin:integer; var s: semaphore);
+var
+    divisor: integer;
+    primo:boolean;
+begin
+
+    while inicio<=fin do
+    begin
+        divisor:=2;
+        primo:=True;       
+        while ((divisor < inicio) and primo) do
+        begin            
+            if inicio mod divisor = 0 then
+            begin
+                primo:=False;
+            end;
+            divisor:=divisor+1;            
+        end;
+
+        if primo then
+        begin
+            wait(s);
+            Writeln ( 'Numero primo: ', inicio);
+            signal(s);
+        end;        
+        inicio:=inicio+1;
+    end;
+end;
+
+var
+p1,p2,p3,p4:obtenerPrimo;
+semaforo: semaphore;
+
+begin
+initial(semaforo,1);
+    cobegin
+        p1(1,25,semaforo);
+        p2(26,50,semaforo);
+        p3(51,75,semaforo);
+        p4(76,100,semaforo);  
+    coend;
+end.

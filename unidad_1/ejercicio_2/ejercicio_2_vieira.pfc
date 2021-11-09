@@ -1,4 +1,4 @@
-program HolaMundo2;
+program HolaMundo;
 
 process type imprimirPares(cant:integer);
 var
@@ -7,14 +7,14 @@ var
 begin
 	num:=2;
 	for	x:=1 to cant do
-	begin	
+	begin
 		writeln('P - generado: ',num);
 		num:=num+2;
 	end;
 end;
 
 process type imprimirImpares(cant:integer);
-var	
+var
 	x:integer;
 	num:integer;
 begin
@@ -23,11 +23,11 @@ begin
 	begin
 		writeln('I - generado: ',num);
 		num:=num+2;
-	end;	
+	end;
 end;
 
 var
-  p1,p2: imprimirPares; 
+  p1,p2: imprimirPares;
   cPares:integer;
 	cImpares:integer;
 	p3: imprimirImpares;
@@ -41,5 +41,5 @@ begin
 		p2(cPares);
 		p3(cImpares);
 	coend;
-   
+
 end.

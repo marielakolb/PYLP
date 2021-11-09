@@ -1,0 +1,37 @@
+program gardens1;
+var
+count: integer;
+sem: semaphore;
+process turnstile1;
+var
+	loop: integer;
+begin
+	for loop := 1 to 5 do
+	begin
+    wait(sem);
+		count := count + 1;
+    signal(sem);
+	end;	
+end; (* turnstile1 *)
+
+process turnstile2;
+var
+	loop: integer;
+begin
+	for loop := 1 to 5 do
+	begin
+    wait(sem);
+	count := count + 1;
+    signal(sem);
+	end;
+end; (* turnstile2 *)
+
+begin
+ initial(sem, 1);
+count := 0;
+cobegin
+	turnstile1;
+	turnstile2;
+coend;
+writeln('Total admitted: ',count)
+end.

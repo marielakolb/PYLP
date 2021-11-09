@@ -1,4 +1,4 @@
-program ejericio_1;
+program ejericio_5_vieira;
 
 process type printId(rango:integer; var s:semaphore);
 begin
@@ -10,7 +10,7 @@ end;
 var
   p1, p2: printId;
   sem: semaphore;
-begin 
+begin
   initial(sem, 1);
   cobegin
     p1(1, sem);

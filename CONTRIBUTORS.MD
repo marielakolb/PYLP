@@ -14,4 +14,4 @@
 - Andrea Zakowicz (@Tremoteam)
 
 ## 2021
-- Joaquin Potocki (@joaquinpotocki)
+- Joaquin Potocki  (@joaquinpotocki)

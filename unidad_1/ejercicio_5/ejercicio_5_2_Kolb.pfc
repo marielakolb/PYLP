@@ -1,0 +1,51 @@
+program ejercicio_5_2_Kolb;
+
+process type imprimirPares(cant:integer; var sem:semaphore);
+var
+	x:integer;
+	num:integer;
+begin
+	num:=2;
+	for	x:=1 to cant do
+	begin
+        wait(sem);	
+		writeln('P - generado: ',num);
+        signal(sem);
+		num:=num+2;
+	end;
+end;
+
+process type imprimirImpares(cant:integer; var sem:semaphore);
+var	
+	x:integer;
+	num:integer;
+begin
+	num:=1;
+	for	x:=1 to cant do
+	begin
+        wait(sem);
+		writeln('I - generado: ',num);
+        signal(sem);
+		num:=num+2;
+	end;	
+end;
+
+var
+  p1,p2: imprimirPares; 
+  cPares:integer;
+	cImpares:integer;
+	p3: imprimirImpares;
+    semaf:semaphore;
+begin
+    initial(semaf,1);
+	writeln('ingrese la cantidad de nros Pares:');
+	readln(cPares);
+	writeln('ingrese la cantidad de nros Impares:');
+	readln(cImpares);
+	cobegin
+		p1(cPares,semaf);
+		p2(cPares,semaf);
+		p3(cImpares,semaf);
+	coend;
+   
+end.

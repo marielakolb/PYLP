@@ -8,10 +8,13 @@
 - Zarske Arnold Oscar (@AuxZarske)
 - Rodrigo Leonel Uriarte (@rodrigoUriarte)
 - Javier Kachuka (@javikachuka)
-- Nicolas Sawczuk (@NicoSawczuk) 
+- Nicolas Sawczuk (@NicoSawczuk)
 - John Babi (@charlesbabi)
 - Facundo Silveira Do Santo (@facundSilveira)
 - Andrea Zakowicz (@Tremoteam)
 
 ## 2021
 - Joaquin Potocki  (@joaquinpotocki)
+- Hernan Vieira (@hernanvieira)
+- Kovalski Matias (@Matiasss11)
+- Enrique Gauto Sand (@EnriqueGautoSand)
